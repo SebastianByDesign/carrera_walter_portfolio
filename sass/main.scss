@@ -1,0 +1,61 @@
+//Importing variables
+@import "_vars";
+
+//Importing layout
+@import "layout/navbar";
+@import "layout/form";
+@import "layout/footer";
+
+//Importing components
+@import "components/sidebar";
+@import "components/lightbox";
+
+//Importing pages
+@import "pages/projects";
+@import "pages/contact";
+@import "pages/about";
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: LatoLight;
+    src: url("../fonts/Lato-Light.ttf");
+}
+
+@font-face {
+    font-family: LatoMedium;
+    src: url("../fonts/Lato-Medium.ttf");
+}
+
+@font-face {
+    font-family: Bourbon;
+    src: url("../fonts/BourbonGrotesque.otf");
+}
+
+.hidden {
+    display: none;
+}
+
+//Media Queries
+@media screen and (min-width: #{$min-width}px) {
+
+    //Calculating the font size according to the width of the viewport. 
+    //Math formula courtesy of Geoff Graham. https://css-tricks.com/snippets/css/fluid-typography/
+    h1 {
+        font-size: calc( 32px + (46 - 32) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+    }
+    h2 {
+        font-size: calc( 24px + (38 - 24) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+    }
+    h3 {
+        font-size: calc( 19px + (33 - 19) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+    }
+    p {
+        font-size: calc( 14px + (20 - 14) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+    }
+
+}

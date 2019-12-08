@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Sebastian Design</title>
+        <meta name="description" content="Walter Sebastian Carrera's Interaction Design Portfolio">
+        <meta name="author" content="Walter Sebastian Carrera" />
+        <meta name="keywords"  content="interaction design,UX,UI,web design,portfolio" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+        <script src="https://kit.fontawesome.com/f8b14333ef.js"></script>
+    </head>
+    <body> 
+        <div class="container">
+            <!--Page Header-->
+            <header>
+                <!--Logo-->
+                <div class="brand">
+                    <a href="#hero">
+                        <object class="logo" type="image/svg+xml" data=""></object>
+                    </a>
+                </div>
+                <!--Navbar-->
+                <nav class="nav">
+                    <ul class="nav-items">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a target="_blank" href="">Resume</a></li>
+                    </ul>
+                </nav>
+                <div class="menu">
+                    <i id="nav-toggler" class="fas fa-plus"></i>
+                </div>
+            </header>
+            <!--Sidebar-->
+            <nav id="sidebar">
+                <ul class="sidebar-items">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a target="_blank" href=""></a>Resume</li>
+                </ul>
+            </nav>
+            <!--Hero Section-->
+            <section class="hero">
+                {{{portfolioTiles}}}
+            </section>
+            <!--Portfolio Pieces-->
+            {{{portfolioItems}}}
+
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
