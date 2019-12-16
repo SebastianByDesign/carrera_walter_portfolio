@@ -1,0 +1,46 @@
+#sidebar {
+    position: fixed;
+    top: calc( 40px + (50 - 35) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+    right: 0;
+    width: 250px;
+    background-color: $dark;
+    transition: margin-right 0.3s;
+    height: 100vh;
+    z-index: 20;
+    margin-right: -250px;
+
+    .sidebar-items {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            padding: 15px 0;
+            width: 100%;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-family: 'lato-medium';
+                font-size: calc( 14px + (20 - 14) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+            }
+
+            &:hover {
+                background-color: $light;
+
+                a {
+                    color: black;
+                }
+                
+            }
+
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #sidebar.active {
+      margin-right: 0px;
+    }
+}

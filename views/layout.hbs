@@ -11,6 +11,11 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="css/main.css" />
 
@@ -22,8 +27,8 @@
             <header>
                 <!--Logo-->
                 <div class="brand">
-                    <a href="#hero">
-                        <object class="logo" type="image/svg+xml" data=""></object>
+                    <a href="#HERO">
+                        <object class="logo" type="image/svg+xml" data="images/logotype.svg"></object>
                     </a>
                 </div>
                 <!--Navbar-->
@@ -43,15 +48,12 @@
                 <ul class="sidebar-items">
                     <li><a href="">About</a></li>
                     <li><a href="">Contact</a></li>
-                    <li><a target="_blank" href=""></a>Resume</li>
+                    <li><a target="_blank" href="">Resume</a></li>
                 </ul>
             </nav>
             <!--Hero Section-->
-            <section class="hero">
-                {{{portfolioTiles}}}
-            </section>
-            <!--Portfolio Pieces-->
-            {{{portfolioItems}}}
+            {{{body}}}
+            
 
         </div>
         <script src="js/main.js"></script>
