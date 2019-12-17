@@ -1,0 +1,41 @@
+.contact {
+    display: flex;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    .hand {
+        width: 150px;
+    }
+
+    .contact-info {
+        width: 36vw;
+        padding: 0 2vw;
+        h2 {
+            font-size: calc( 20px + (24 - 20) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+            font-family: 'LatoMedium';
+        }
+        p {
+            font-size: calc( 12px + (18 - 12) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+            font-family: 'LatoLight';
+            margin-top: 10px;
+
+            a {
+                text-decoration: none;
+                color: $blue;
+            }
+        }
+        ul {
+            list-style: none;
+
+            li {
+                display: inline;
+
+                img {
+                    padding: 15px 15px 0 0;
+                }
+            }
+        }
+    }
+}

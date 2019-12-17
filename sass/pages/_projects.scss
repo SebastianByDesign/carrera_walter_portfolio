@@ -6,7 +6,6 @@
     flex-direction: row;
     max-width: 100vw;
 
-
     .portfolioTile {
         width: calc(100vw/3);
         overflow: hidden;
@@ -16,7 +15,6 @@
             .box {
                 display: flex;
                 justify-content: center;
-                
                 
                 img{
                     -webkit-transition: all 1s ease;

@@ -1,0 +1,36 @@
+<section class="hero">
+    {{#each piece}}
+        <div class="portfolioTile">
+            <a class="pieceLink" href="piece/{{ id }}">
+                <div class="box">
+                    <img class="tileImage" src="images/{{ image }}" alt="{{ title }}">
+                </div>
+            </a>
+        </div>
+    {{/each}}
+</section>
+
+<section class="shadow">
+    
+</section>
+
+<section class="lightBox">
+    <i id="close" class="fas fa-times"></i>
+    <div class="portfolioPiece">
+        <div class="pieceHead">
+            <img class="pieceImage" src="" alt="">
+        </div>
+        <div class="pieceBody">
+            <div class="pieceInfo">
+                
+            </div>
+            <div class="pieceMore">
+                <p>Software Used:</p>
+                <ul class="pieceSoftware">
+                    
+                </ul>
+                <a class="moreLink" href="">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>

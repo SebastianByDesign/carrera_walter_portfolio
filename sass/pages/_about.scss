@@ -1,0 +1,21 @@
+.about {
+    display: flex;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    .about-info {
+        width: 36vw;
+        padding: 0 2vw;
+        h2 {
+            font-size: calc( 20px + (24 - 20) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+            font-family: 'LatoMedium';
+        }
+        p {
+            font-size: calc( 12px + (18 - 12) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+            font-family: 'LatoLight';
+            margin-top: 10px;
+        }
+    }
+}

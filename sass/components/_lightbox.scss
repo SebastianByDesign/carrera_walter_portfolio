@@ -1,0 +1,115 @@
+.shadow {
+    z-index: 5;
+    content:'';
+    display: none;
+    -webkit-box-shadow: inset 100vw 100vh 0px 100vw rgba(0,0,0,0.75);
+       -moz-box-shadow: inset 100vw 100vh 0px 100vw rgba(0,0,0,0.75);
+            box-shadow: inset 100vw 100vh 0px 100vw rgba(0,0,0,0.75);
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+}
+
+.lightBox {
+    display: none;
+    flex-direction: row;
+    width: 60vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 15;
+    background-color: $light;
+    margin: 0 auto;
+    padding: 30px 10px;
+
+    #close {
+        position: absolute;
+        right: 12px;
+        top: 10px;
+    }
+
+    .portfolioPiece {
+
+        .pieceHead {
+            display: flex;
+            justify-content: center;
+
+            .pieceImage {
+                padding-bottom: 25px;
+                width: 95%;
+            }
+        }
+
+        .pieceBody {
+            display: flex;
+            .pieceInfo {
+                width: calc(90%/2);
+                padding: 0 calc(5%/2);
+
+                h2 {
+                    font-size: calc( 20px + (24 - 20) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+                    font-family: 'LatoMedium';
+                }
+                h3 {
+                    font-size: calc( 16px + (20 - 16) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+                    font-family: 'LatoLight'; 
+                }
+                p {
+                    font-size: calc( 12px + (18 - 12) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+                    font-family: 'LatoLight';
+                    margin-top: 10px;
+                }
+
+            }
+            .pieceMore {
+                width: calc(90%/2);
+                padding: 0 calc(5%/2);
+
+                p {
+                    font-size: calc( 12px + (18 - 12) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+                    font-family: 'LatoMedium';
+                    width: 100%;
+                    background-color: $dark;
+                    text-align: center;
+                    color: white;
+                    padding: calc(2%/2) 0;
+                }
+                .pieceSoftware {
+                    list-style: none;
+                    text-align: center;
+
+                    li {
+                        display: inline;
+                        width: 100%;
+
+                        img {
+                            padding: 10px 15px 6px 15px;
+                        }
+                    }
+
+                }
+                .moreLink {
+                    display: block;
+                    width: 100%;
+                    border: 1px solid #5CA6D7;
+                    padding: 10px 0;
+                    text-decoration: none;
+                    color: black;
+                    text-align: center;
+                    font-family: 'latoLight';
+                    font-size: calc( 12px + (18 - 12) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+                }
+            }
+        }
+    }
+}
+
+.show-lb { display: flex !important; }
+.show-shadow { display: block !important; }
+
+@media screen and (max-width: 900px) {
+
+}
