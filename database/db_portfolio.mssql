@@ -1,0 +1,200 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Dec 17, 2019 at 07:35 PM
+-- Server version: 5.7.26
+-- PHP Version: 7.3.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_portfolio`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_category`
+--
+
+CREATE TABLE `tbl_category` (
+  `category_id` int(11) NOT NULL,
+  `category_name` varchar(60) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `tbl_category`
+--
+
+INSERT INTO `tbl_category` (`category_id`, `category_name`) VALUES
+(1, 'Web Development'),
+(2, 'App Development'),
+(3, '3D Design'),
+(4, '2D Design'),
+(5, 'Web Design'),
+(6, 'App Design'),
+(7, '3D Animation'),
+(8, '2D Animation'),
+(9, 'Product Design'),
+(10, 'Video Production');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_piece_software`
+--
+
+CREATE TABLE `tbl_piece_software` (
+  `piece_ware_id` int(11) NOT NULL,
+  `piece_id` int(11) NOT NULL,
+  `software_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `tbl_piece_software`
+--
+
+INSERT INTO `tbl_piece_software` (`piece_ware_id`, `piece_id`, `software_id`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 6),
+(4, 2, 3),
+(5, 2, 5),
+(6, 3, 1),
+(7, 3, 2),
+(8, 3, 6),
+(9, 4, 1),
+(10, 4, 2),
+(11, 4, 6),
+(12, 6, 3),
+(13, 6, 5),
+(14, 7, 6),
+(15, 8, 6),
+(16, 9, 1),
+(17, 9, 2),
+(18, 9, 3),
+(19, 9, 4),
+(20, 5, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_portfolio_piece`
+--
+
+CREATE TABLE `tbl_portfolio_piece` (
+  `piece_id` int(11) NOT NULL,
+  `div_id` varchar(10) COLLATE utf8_bin NOT NULL,
+  `piece_title` varchar(60) COLLATE utf8_bin NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `piece_image` varchar(20) COLLATE utf8_bin NOT NULL,
+  `piece_info` varchar(200) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `tbl_portfolio_piece`
+--
+
+INSERT INTO `tbl_portfolio_piece` (`piece_id`, `div_id`, `piece_title`, `category_id`, `piece_image`, `piece_info`) VALUES
+(1, 'R1SE', 'R1SE - Official Band Website', 5, 'r1se.jpg', 'Designed a mobile-first website to promote music and merchandise from the Canadian indie rock band, R1SE.'),
+(2, 'LEGO', 'Lego Bricks Commercial', 7, 'lego.jpg', 'Produced and animated a mock Lego commercial using 3D and video production techniques. '),
+(3, 'MAPP', 'MAPP - A Mall Map Application', 6, 'mapp.jpg', 'Designed a mobile application to help users find the nearest malls and the stores within them.'),
+(4, 'ASP', 'Argentina\'s Sweets and Pastries', 5, 'asp.jpg', 'Designed a website where users can find and post recipes for desserts made in the South American country, Argentina.'),
+(5, 'HERO', 'Interactive Media Designer', 10, 'hero.jpg', 'A video presentation of my portfolio'),
+(6, 'SN', 'Sportsnet Introduction', 7, 'sn.jpg', 'Produced and animated a mock Sportsnet introduction of the Dallas Cowboys vs Chicago Bears football game. '),
+(7, 'HELP', 'Helping the Homeless', 1, 'help.jpg', 'Designed and developed a one-page website to raise the awareness of homelessness in Canada and ways in which we can help.'),
+(8, 'TSH', 'ThermoSecurity by Housecom', 1, 'tsh.jpg', 'Developed a mobile-first website for a fictional company to show its all-in-one thermostat and security product.'),
+(9, 'SP', 'Smart Paper', 9, 'sp.jpg', 'Conceptualized a futuristic product and produced a commercial to demonstrate its capabilities in everyday use.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_software`
+--
+
+CREATE TABLE `tbl_software` (
+  `software_id` int(11) NOT NULL,
+  `software_name` varchar(60) COLLATE utf8_bin NOT NULL,
+  `software_image` varchar(20) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `tbl_software`
+--
+
+INSERT INTO `tbl_software` (`software_id`, `software_name`, `software_image`) VALUES
+(1, 'Adobe Illustrator', 'aiLogo.png'),
+(2, 'Adobe Photoshop', 'psLogo.png'),
+(3, 'Adobe Premiere Pro', 'prLogo.png'),
+(4, 'Adobe After Effects', 'aeLogo.png'),
+(5, 'Maxon Cinema 4D', 'c4dLogo.png'),
+(6, 'Visual Studio Code', 'vsLogo.png');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_category`
+--
+ALTER TABLE `tbl_category`
+  ADD PRIMARY KEY (`category_id`);
+
+--
+-- Indexes for table `tbl_piece_software`
+--
+ALTER TABLE `tbl_piece_software`
+  ADD PRIMARY KEY (`piece_ware_id`);
+
+--
+-- Indexes for table `tbl_portfolio_piece`
+--
+ALTER TABLE `tbl_portfolio_piece`
+  ADD PRIMARY KEY (`piece_id`);
+
+--
+-- Indexes for table `tbl_software`
+--
+ALTER TABLE `tbl_software`
+  ADD PRIMARY KEY (`software_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_category`
+--
+ALTER TABLE `tbl_category`
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `tbl_piece_software`
+--
+ALTER TABLE `tbl_piece_software`
+  MODIFY `piece_ware_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `tbl_portfolio_piece`
+--
+ALTER TABLE `tbl_portfolio_piece`
+  MODIFY `piece_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `tbl_software`
+--
+ALTER TABLE `tbl_software`
+  MODIFY `software_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
